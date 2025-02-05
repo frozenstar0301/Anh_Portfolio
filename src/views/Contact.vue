@@ -42,7 +42,7 @@
 						</div>
 
 						<div class="g-recaptcha">
-							<vue-recaptcha theme="dark" sitekey="6Ldbps0qAAAAABx6XW6xnEsPbxqJg4xfsnqDND5D" :loadRecaptchaScript="true"
+							<vue-recaptcha theme="dark" sitekey="6Leip0QaAAAAABA2pFDnWpUrAbdiEQETMtNwvh15" :loadRecaptchaScript="true"
 								@verify="form.isValidatedRecaptcha = true" @expired="form.isValidatedRecaptcha = false">
 							</vue-recaptcha>
 							<small v-if="!form.isValidatedRecaptcha" class="text-danger">Please validate the reCAPTCHA</small>
