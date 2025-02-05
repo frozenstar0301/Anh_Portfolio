@@ -41,13 +41,6 @@
 							</div>
 						</div>
 
-						<div class="g-recaptcha">
-							<vue-recaptcha theme="dark" sitekey="6Leip0QaAAAAABA2pFDnWpUrAbdiEQETMtNwvh15" :loadRecaptchaScript="true"
-								@verify="form.isValidatedRecaptcha = true" @expired="form.isValidatedRecaptcha = false">
-							</vue-recaptcha>
-							<small v-if="!form.isValidatedRecaptcha" class="text-danger">Please validate the reCAPTCHA</small>
-						</div>
-
 						<input type="submit" class="button btn-send" value="Send message" />
 					</div>
 				</form>
@@ -78,11 +71,7 @@ export default {
 	},
 	methods: {
 		sendEmail() {
-			if (this.form.isValidatedRecaptcha) {
-				window.open(`mailto:nguyenngoc.anh5338@gmail.com?subject=${this.form.subject}&body=${this.form.body}`);
-			} else {
-				window.alert('Please, be sure to validate reCaptcha')
-			}
+			window.open(`mailto:nguyenngoc.anh5338@gmail.com?subject=${this.form.subject}&body=${this.form.body}`);
 		}
 	},
 	mounted() {
